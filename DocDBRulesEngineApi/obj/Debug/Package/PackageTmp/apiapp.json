@@ -1,0 +1,12 @@
+﻿{
+  "$ Schema": "http://json-schema.org/schemas/2014-11-01/apiapp.json#",
+  "Id": "DocDBRulesEngineApi",
+  "Namespace": "microsoft.com",
+  "Gateway": "2015-01-14",
+  "version": "1.0.0",
+  "Links": [ ],
+  "Endpoints": {
+    "ApiDefinition": "/swagger/docs/v1",
+    "Status": null
+  }
+}
