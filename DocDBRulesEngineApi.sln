@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "DocDBRulesEngineApi", "DocDBRulesEngineApi\DocDBRulesEngineApi.njsproj", "{BB355385-EE21-4E34-9A65-E664F41494BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{F130CBE5-9FF1-4412-BA4B-46DF22B9462F}"
+	ProjectSection(SolutionItems) = preProject
+		D:\Downloads\RULES ENGINE\brij-spec-master\examples\advanced_example.json = D:\Downloads\RULES ENGINE\brij-spec-master\examples\advanced_example.json
+		D:\Downloads\RULES ENGINE\brij-spec-master\examples\simple_example.json = D:\Downloads\RULES ENGINE\brij-spec-master\examples\simple_example.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB355385-EE21-4E34-9A65-E664F41494BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB355385-EE21-4E34-9A65-E664F41494BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB355385-EE21-4E34-9A65-E664F41494BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB355385-EE21-4E34-9A65-E664F41494BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

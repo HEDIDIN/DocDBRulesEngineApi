@@ -1,0 +1,143 @@
+﻿{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "JSON Business Rules Engine",
+    "description": "JSON Business Rules Engine",
+    "contact": {
+      "name": "Howard S. Edidin",
+      "email": "hedidin@edidingroup.net",
+      "Url": "https://github.com/hedidin"
+    },
+    "License": {
+      "Name": "MIT",
+      "Url": "https://github.com/hedidn/DocDBRulesEngineApi"
+    }
+  },
+  "host": "localhost:1337",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/Validate": {
+      "post": {
+        "tags": [
+          "JSON"
+        ],
+        "summary": "Validate JSON Business Rule",
+        "description": "JSON Business Rule: Return true or false",
+        "operationId": "Validate",
+        "consumes": [
+          "application/json",
+          "text/json"
+        ],
+        "produces": [
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "description": "JSON Rule schema",
+            "schema": {
+              "$ref": "#/definitions/JsonBody"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResultsObject"
+            }
+          },
+          "default": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ResultsObject"
+            }
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "definitions": {
+    "JsonBody": {
+      "required": [
+        "id",
+        "rule",
+        "actions"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "x-ms-summary": "Rule Id",
+          "description": "Unique identifier for Rule"
+        },
+        "description": {
+          "type": "string",
+          "x-ms-summary": "Description",
+          "description": "Description for the rule"
+        },
+        "rule": {
+          "description": "The rule to be evaulated",
+          "x-ms-summary": "Rule for evaluation",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Rule"
+          }
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "actions to be performed",
+          "x-ms-summary": "Array of actions"
+        }
+      }
+    },
+    "ResultsObject": {
+      "type": "string",
+      "x-ms-summary": "Results",
+      "description": "The JSON Data returned from your rule",
+      "properties": {
+        "result": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Rule": {
+      "required": [
+        "property",
+        "condition"
+      ],
+      "x-ms-summary": "Rule to be validated",
+      "description": "The properties that make up the rule",
+      "properties": {
+        "property": {
+          "type": "string",
+          "description": "The object being evaulated",
+          "x-ms-summary": "Validaton Object"
+        },
+        "condition": {
+          "type": "string",
+          "description": "Condition to be met",
+          "x-ms-summary": "Condition"
+        },
+        "value": {
+          "type": "string",
+          "description": "Value for condition",
+          "x-ms-summary": "Condition Value"
+        }
+      }
+    }
+  }
+}
