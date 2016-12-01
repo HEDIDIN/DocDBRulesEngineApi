@@ -147,7 +147,7 @@ Unless custom actions are defined, the engine should simply evaluate the defined
  - returnOnFalse
 
 ## Rules Documents storage
-Rules can be store in DocumentDB
+Rules can be stored in DocumentDB or any other type of Storage Servicce
 
 
 
